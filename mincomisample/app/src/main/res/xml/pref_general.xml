@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory
+        android:title="サービスにログイン">
+        <Preference
+            android:title="ログイン"/>
+        <Preference
+            android:title="会員登録"/>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="その他">
+        <Preference
+            android:title="お知らせ"/>
+        <Preference
+            android:key="various"
+            android:title="設定"/>
+        <Preference
+            android:title="ヘルプ"/>
+        <Preference
+            android:title="お問い合わせ"/>
+        <Preference
+            android:title="サービスについて"/>
+        <Preference
+            android:title="利用規約"/>
+        <Preference
+            android:title="個人情報保護指針"/>
+
+    </PreferenceCategory>
+
+</PreferenceScreen>
