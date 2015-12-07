@@ -20,6 +20,50 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+        <activity
+            android:name=".TitleActivity"
+            android:label="タイトルページ">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+
+                <data
+                    android:host="www.mincomi.jp"
+                    android:pathPattern="/?title=.*"
+                    android:pathPrefix="/title"
+                    android:scheme="http"/>
+
+                <data
+                    android:host="www.mincomi.jp"
+                    android:pathPattern="/?title=.*"
+                    android:pathPrefix="/title"
+                    android:scheme="https"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".AuthorActivity"
+            android:label="著者ページ">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+
+                <data
+                    android:host="www.mincomi.jp"
+                    android:pathPattern="/?author=.*"
+                    android:pathPrefix="/author"
+                    android:scheme="http"/>
+
+                <data
+                    android:host="www.mincomi.jp"
+                    android:pathPattern="/?author=.*"
+                    android:pathPrefix="/author"
+                    android:scheme="https"/>
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>
