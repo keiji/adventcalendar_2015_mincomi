@@ -1,6 +1,7 @@
 package io.keiji.mincomisample;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.view.PagerAdapter;
@@ -24,6 +25,10 @@ public class MainActivity extends AppCompatActivity {
             R.drawable.ic_vpn_key_black_48dp,
             R.drawable.ic_person_black_48dp,
     };
+
+    public static Intent newIntent(Context context) {
+        return new Intent(context, MainActivity.class);
+    }
 
     private final List<ImageView> mIndicatorList = new ArrayList<>();
 

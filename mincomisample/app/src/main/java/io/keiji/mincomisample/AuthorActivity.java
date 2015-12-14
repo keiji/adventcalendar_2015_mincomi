@@ -23,8 +23,7 @@ public class AuthorActivity extends AppCompatActivity {
     private void processIntent(Intent intent, TextView textView) {
 
         Uri uri = intent.getData();
-        String[] query = uri.getQuery().split("=");
-        String authorId = query[1];
+        String authorId = uri.getQueryParameter("author");
 
         textView.setText("authorId = " + authorId);
     }
