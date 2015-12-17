@@ -25,6 +25,15 @@
             android:label="その他">
         </activity>
         <activity
+            android:name=".ScrollerActivity"
+            android:label="スクロールサンプル">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity
             android:name=".TitleActivity"
             android:label="タイトルページ">
             <intent-filter>
