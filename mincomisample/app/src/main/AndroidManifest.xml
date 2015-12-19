@@ -43,6 +43,15 @@
             </intent-filter>
         </activity>
         <activity
+            android:name=".DrawPerformanceActivity"
+            android:label="描画パフォーマンス">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity
             android:name=".TitleActivity"
             android:label="タイトルページ">
             <intent-filter>
