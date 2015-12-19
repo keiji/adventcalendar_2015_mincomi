@@ -52,7 +52,7 @@ public class ZoomView extends View {
 
         @Override
         public boolean onScale(ScaleGestureDetector detector) {
-            float scale = 1 + detector.getCurrentSpanX() - mLastScaleFactor;
+            float scale = 1 + detector.getScaleFactor() - mLastScaleFactor;
 
             Log.d(TAG, "scale = " + scale);
             setScale(scale, detector.getFocusX(), detector.getFocusY());
