@@ -4,9 +4,11 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
+import android.support.design.widget.TabLayout;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
@@ -25,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
             R.drawable.ic_vpn_key_black_48dp,
             R.drawable.ic_person_black_48dp,
     };
+    private TabLayout mTabLayout;
 
     public static Intent newIntent(Context context) {
         return new Intent(context, MainActivity.class);
@@ -41,6 +44,11 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        if (toolbar != null) {
+            setSupportActionBar(toolbar);
+        }
 
         mPageControl = (LinearLayout) findViewById(R.id.pagecontrol);
         for (int foo : DRAWABLE_ARRAY) {
@@ -70,6 +78,12 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+
+        mTabLayout = (TabLayout) findViewById(R.id.tabs);
+        mTabLayout.addTab(mTabLayout.newTab().setText("ホーム"));
+        mTabLayout.addTab(mTabLayout.newTab().setText("ランキング"));
+        mTabLayout.addTab(mTabLayout.newTab().setText("お気に入り"));
+        mTabLayout.addTab(mTabLayout.newTab().setText("その他"));
     }
 
     private void selectIndicator(ImageView indicator) {
