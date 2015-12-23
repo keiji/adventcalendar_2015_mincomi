@@ -1,5 +1,7 @@
 package io.keiji.mincomisample;
 
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.preference.Preference;
 import android.preference.PreferenceFragment;
@@ -33,9 +35,14 @@ public class SettingActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case android.R.id.home:
-                return getFragmentManager().popBackStackImmediate();
+                finish();
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    public static Intent newIntent(Context context) {
+        Intent intent = new Intent(context, SettingActivity.class);
+        return intent;
     }
 
     public static class GeneralSettingFragment extends PreferenceFragment
