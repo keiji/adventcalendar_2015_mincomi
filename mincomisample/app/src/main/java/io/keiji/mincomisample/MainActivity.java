@@ -111,10 +111,12 @@ public class MainActivity extends AppCompatActivity
         mTabLayout.addTab(mRankingTab);
         mTabLayout.addTab(mFavoritesTab);
 
-        getSupportFragmentManager()
-                .beginTransaction()
-                .replace(R.id.container, HomeFragment.newInstance(50), HomeFragment.class.getSimpleName())
-                .commit();
+        if (savedInstanceState == null) {
+            getSupportFragmentManager()
+                    .beginTransaction()
+                    .replace(R.id.container, HomeFragment.newInstance(50), HomeFragment.class.getSimpleName())
+                    .commit();
+        }
     }
 
     private void selectIndicator(ImageView indicator) {
