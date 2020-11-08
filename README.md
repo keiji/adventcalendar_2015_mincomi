@@ -1,7 +1,14 @@
 # みんコミ Advent Calendar 2015向け サンプルプロジェクト
 
-[みんコミ Advent Calendar 2015](http://qiita.com/advent-calendar/2015/mincomi)用のサンプルプロジェクトです。
+[みんコミ Advent Calendar 2015](https://blog.keiji.dev//categories/%E3%81%BF%E3%82%93%E3%82%B3%E3%83%9F-advent-calendar/)用のサンプルプロジェクトです。
 
+**This repository is no longer maintained.**
+
+----
+みんコミAdvent Calendarその他の知見を元に、漫画表示用カスタムビュー「MangaView」を公開しました。
+
+ * https://github.com/keiji/mangaview
+----
 
 ## License
 
